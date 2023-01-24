@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:    
+  nginx:
+    image: jonasal/nginx-certbot:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - nginx_secrets:/etc/letsencrypt
+      - nginx_logs:/var/log/nginx
+            
+volumes:
+  nginx_secrets:
+  nginx_logs:
