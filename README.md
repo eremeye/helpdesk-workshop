@@ -6,4 +6,7 @@
 4. cd to /reverse_proxy and run "docker compose up -d" 
 5. Copy /chatwoot/.env.example to .env
 6. edit .env with your values
-7. cd to /chatwoot and run "docker compose up -d" 
+7. cd to /chatwoot and run "docker compose up -d"
+8. In chatwoot container run "bundle exec rails db:chatwoot_prepare" 
+
+Ref: https://www.chatwoot.com/docs/self-hosted/deployment/docker
