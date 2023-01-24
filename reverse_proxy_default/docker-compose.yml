@@ -9,6 +9,7 @@ services:
     volumes:
       - nginx_secrets:/etc/letsencrypt
       - nginx_logs:/var/log/nginx
+      - ./configs:/etc/nginx/user_conf.d
             
 volumes:
   nginx_secrets:
