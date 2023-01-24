@@ -20,10 +20,11 @@ services:
       - INSTALLATION_ENV=docker
       - ACTIVE_STORAGE_SERVICE=local
       - LOG_LEVEL=warn
-    ports:
-      - 80:3000
     volumes:
       - app_data:/app/storage
+    networks:
+      - default
+      - reverse_proxy
 
     depends_on:
       - postgres
@@ -60,4 +61,7 @@ volumes:
   pg_data:
   redis_data:
     
-
+networks:
+  reverse_proxy:
+    name: reverse_proxy_default
+    external: true
