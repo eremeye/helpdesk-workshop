@@ -6,7 +6,7 @@ services:
     environment: 
       - SECRET_KEY_BASE
       - FRONTEND_URL
-      - ENABLE_ACCOUNT_SIGNUP=${ENABLE_ACCOUNT_SIGNUP:-false}
+      - ENABLE_ACCOUNT_SIGNUP
       - REDIS_URL=redis://redis
       - REDIS_PASSWORD
       - POSTGRES_HOST=postgres
@@ -27,6 +27,7 @@ services:
       - INSTALLATION_ENV=docker
       - ACTIVE_STORAGE_SERVICE=local
       - LOG_LEVEL=warn
+      - DEFAULT_LOCALE
     volumes:
       - app_data:/app/storage
     networks:
