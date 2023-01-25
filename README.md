@@ -10,4 +10,6 @@
 8. cd to /chatwoot and run "docker compose up -d"
 9. In chatwoot container run "bundle exec rails db:chatwoot_prepare" 
 
-Ref: https://www.chatwoot.com/docs/self-hosted/deployment/docker
+## References 
+https://www.chatwoot.com/docs/self-hosted/deployment/docker
+https://www.chatwoot.com/docs/self-hosted/configuration/environment-variables
