@@ -3,6 +3,10 @@ version: '3.8'
 services:    
   nginx:
     image: jonasal/nginx-certbot:latest
+    environment:
+      - CERTBOT_EMAIL=${CERTBOT_EMAIL:-admin@example.org}
+      - STAGING=${STAGING:-0}
+      - DEBUG=${DEBUG:-0}
     ports:
       - 80:80
       - 443:443
