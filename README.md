@@ -11,6 +11,6 @@
 9. In chatwoot container run "bundle exec rails db:chatwoot_prepare" 
 
 ## References 
-https://www.chatwoot.com/docs/self-hosted/deployment/docker
-https://www.chatwoot.com/docs/self-hosted/configuration/environment-variables
-https://hub.docker.com/r/jonasal/nginx-certbot
+- https://www.chatwoot.com/docs/self-hosted/deployment/docker
+- https://www.chatwoot.com/docs/self-hosted/configuration/environment-variables
+- https://hub.docker.com/r/jonasal/nginx-certbot
