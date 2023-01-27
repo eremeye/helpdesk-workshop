@@ -12,6 +12,7 @@ services:
       - RASA_ACTION_SERVER_URL
     volumes:
     - "./rasa-app-data/:/app/"
+    - "./rasa-models/:/app/models/"
     command: ["run", "--enable-api", "--port", "5005"]
 
   action_server:
