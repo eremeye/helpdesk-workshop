@@ -13,6 +13,7 @@
 ## How to add agent bot
 
 - https://www.chatwoot.com/docs/product/others/agent-bots#adding-agent-bots-to-chatwoot
+- https://github.com/conlabai/chatwoot-rasa-bridge
 
 ## References 
 - https://www.chatwoot.com/docs/self-hosted/deployment/docker
