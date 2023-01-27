@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  rasa:
+    image: rasa/rasa:latest-full
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_DB
+      - POSTGRES_PASSWORD
+      - POSTGRES_HOST
+      - POSTGRES_PORT
+      - RASA_ACTION_SERVER_URL
+    volumes:
+    - "./rasa-app-data/:/app/"
+    command: ["run", "--enable-api", "--port", "5005"]
+
+  action_server:
+    image: rasa/rasa-sdk:latest
+    volumes:
+    - "./rasa-app-data/actions:/app/actions"
+    networks:
+      - default
+      - chatwoot
+
+  bridge:
+    image: conlab/chatwoot-rasa-bridge:latest
+    environment:
+      - RASA_URL
+      - CHATWOOT_URL
+      - CHATWOOT_API_KEY
+      - CHATWOOT_MESSAGES_DELAY
+    networks:
+      - default
+      - chatwoot
+
+  postgres:
+    image: postgres:14.4
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_DB
+      - POSTGRES_PASSWORD
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
+
+networks:
+  chatwoot:
+    name: chatwoot_default
+    external: true
