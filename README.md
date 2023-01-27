@@ -1,7 +1,7 @@
 ## Instructions
 
 1. Set up account on sendgrid.com verify domain and get api key
-2. Install docker with compose plugin
+2. Install docker with compose plugin (https://docs.docker.com/engine/install/ubuntu/)
 3. Copy /reverse_proxy/example_configs/chatwoot.conf to /reverse_proxy/configs/chatwoot.conf
 4. In /reverse_proxy/configs/chatwoot.conf replace everywhere chat.example.org with your domain
 5. cd to /reverse_proxy and run "docker compose up -d" 
