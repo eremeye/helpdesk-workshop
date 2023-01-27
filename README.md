@@ -10,6 +10,10 @@
 8. cd to /chatwoot and run "docker compose up -d"
 9. ```docker compose run --rm chatwoot bundle exec rails db:chatwoot_prepare```
 
+## How to add agent bot
+
+- https://www.chatwoot.com/docs/product/others/agent-bots#adding-agent-bots-to-chatwoot
+
 ## References 
 - https://www.chatwoot.com/docs/self-hosted/deployment/docker
 - https://www.chatwoot.com/docs/self-hosted/configuration/environment-variables
