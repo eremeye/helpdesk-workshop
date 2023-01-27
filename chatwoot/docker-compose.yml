@@ -11,7 +11,7 @@ services:
       - REDIS_PASSWORD
       - POSTGRES_HOST=postgres
       - POSTGRES_USERNAME
-      - POSTGRES_DB
+      - POSTGRES_DATABASE=${POSTGRES_DB}
       - POSTGRES_PASSWORD   
       - MAILER_SENDER_EMAIL
       - SMTP_ADDRESS
@@ -52,7 +52,7 @@ services:
     image: postgres:14.4
     environment:
       - POSTGRES_HOST
-      - POSTGRES_USERNAME
+      - POSTGRES_USER=${POSTGRES_USERNAME}
       - POSTGRES_DB
       - POSTGRES_PASSWORD
     volumes:
