@@ -8,7 +8,7 @@
 6. Copy /chatwoot/.env.example to /chatwoot/.env
 7. Edit .env with your values
 8. cd to /chatwoot and run "docker compose up -d"
-9. In chatwoot container run "bundle exec rails db:chatwoot_prepare" 
+9. ```docker compose run --rm chatwoot bundle exec rails db:chatwoot_prepare```
 
 ## References 
 - https://www.chatwoot.com/docs/self-hosted/deployment/docker
