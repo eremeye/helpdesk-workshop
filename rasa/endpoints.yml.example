@@ -3,7 +3,7 @@
 # Server where the models are pulled from.
 # https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
 
-3models:
+models:
 # url: ${RASA_MODEL_SERVER_URL}/@latest
 # wait_time_between_pulls:  10   # [optional](default: 100)
 
